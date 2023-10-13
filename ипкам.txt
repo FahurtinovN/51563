@@ -1,0 +1,71 @@
+1) Задача
+a = int(input("Введите число: "))
+k = 0
+for i in range(2, a // 2+1):
+    if (a % i == 0):
+        k = k+1
+if (k <= 0):
+    print("Число простое")
+else:
+    print("Число не простое")
+
+
+
+2)задача
+N = 10
+a = []
+for i in range(N):
+    a.append(randint(1, 99))
+print(a)  
+for i in range(N-1):
+    for j in range(N-i-1):
+        if a[j] > a[j+1]:
+            a[j], a[j+1] = a[j+1], a[j]
+ 
+print(a)
+
+3)задача
+a = [
+    [9, 2, 3],
+    [4, 5, 6],
+    [7, 8, 1]
+]
+b = [1, 2, 3, 4, 5, 6, 78, 0]
+
+m = min(a, key=min)
+i = a.index(m)      
+j = m.index(min(m)) 
+
+a[i][j] = max(b)    
+4)задача
+fib1 = 1
+fib2 = 1
+ 
+n = input("Номер элемента ряда Фибоначчи: ")
+n = int(n)
+ 
+i = 0
+while i < n - 2:
+    fib_sum = fib1 + fib2
+    fib1 = fib2
+    fib2 = fib_sum
+    i = i + 1
+ 
+print("Значение этого элемента:", fib2)
+
+5)задача
+с = [] 
+a = {}
+b = 0
+ans = ''
+
+for i in с:
+    if i in a:
+        a[i] += 1
+    else:
+        a[i] = 1
+    if a[i] > b:
+        b = a[i]
+        ans = i
+
+print(ans)
